@@ -31,9 +31,9 @@ A ready to flash Armbian image is available for Raspberry Pi, Orange Pi Zero, Or
 
 For older Raspberry Pi releases, see [here](https://github.com/jancelin/pi-gen/releases/latest).
 
-## Quectel LG290K / Olimex i.MX8MPlus
+## Quectel LG290P / Olimex i.MX8MPlus
 
-RTKBase includes Quectel LG290P03 receiver detection and configuration, including the Waveshare LG290K. The current supported/tested setup uses USB serial at 460800 baud. See [LG290K and Olimex wiring/timing profiles](docs/lg290-olimex-wiring.md) for the current USB setup and future PPS, direct-UART, and combined wiring requirements.
+RTKBase includes Quectel LG290P03 receiver detection and configuration, including the Waveshare LG290P RTK GNSS module. The current supported/tested setup uses USB serial at 460800 baud. See [LG290P and Olimex wiring/timing profiles](docs/lg290-olimex-wiring.md) for the current USB setup and future PPS, direct-UART (`UEXT1` 3.3 V native or `EXT1`/`EXT2` with 1.8 V level shifting), and combined wiring requirements.
 
 ## Easy installation:
 + Connect your gnss receiver to your raspberry pi/orange pi/....
@@ -47,7 +47,7 @@ RTKBase includes Quectel LG290P03 receiver detection and configuration, includin
   sudo ./install.sh --all release
   ```
 
-+ Go grab a coffee, it's gonna take a while. The script will install the needed software, and if you use a supported receiver (U-Blox ZED-F9P, Septentrio Mosaic-X5, Unicore UM980/UM982, Quectel LG290P03 such as the Waveshare LG290K), it'll be detected and set to work as a base station. If you don't use a supported receiver, you will have to configure your receiver manually (see step 7 in manual installation), and choose the correct port from the settings page.
++ Go grab a coffee, it's gonna take a while. The script will install the needed software, and if you use a supported receiver (U-Blox ZED-F9P, Septentrio Mosaic-X5, Unicore UM980/UM982, Quectel LG290P03 such as the Waveshare LG290P), it'll be detected and set to work as a base station. If you don't use a supported receiver, you will have to configure your receiver manually (see step 7 in manual installation), and choose the correct port from the settings page.
 
 + Open a web browser to `http://ip_of_your_sbc` (the script will try to show you this ip address). Default password is `admin`. The settings page allows you to enter your own settings for the base coordinates, ntrip credentials and so on...
 
